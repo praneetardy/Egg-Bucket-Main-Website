@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
+import { FaPlus } from "react-icons/fa";
 
 const FAQSection = () => {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -61,33 +62,18 @@ const FAQSection = () => {
         <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">
           Frequently Asked Questions (FAQ)
         </h2>
-        <div className="space-y-6 max-w-3xl mx-auto">
+        <div className="space-y-6 max-w-3xl  mx-auto">
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="bg-white shadow-lg rounded-lg transition-all duration-500 overflow-hidden"
+              className="bg-white border-b border-grey-900 rounded-lg transition-all duration-500 overflow-hidden"
             >
               <button
                 onClick={() => toggleFAQ(index)}
-                className="w-full flex justify-between items-center px-6 py-4 text-left text-gray-800 font-semibold focus:outline-none"
+                className="w-full flex justify-between items-center px-6 py-4 text-left text-gray-800  focus:outline-none"
               >
                 <span className="text-lg">{faq.question}</span>
-                <svg
-                  className={`w-6 h-6 transform transition-transform duration-300 ${
-                    activeIndex === index ? "rotate-180" : "rotate-0"
-                  }`}
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M19 9l-7 7-7-7"
-                  ></path>
-                </svg>
+                <FaPlus className="text-[#f87709] "></FaPlus>
               </button>
               <div
                 ref={(el) => (answerRefs.current[index] = el)}
@@ -96,7 +82,7 @@ const FAQSection = () => {
                   maxHeight: `${maxHeight[index] || 0}px`,
                 }}
               >
-                <div className="px-6 pb-4 bg-white rounded-b-lg border-t border-gray-200">
+                <div className="px-6 pb-4 bg-white rounded-b-lg ">
                   <p className="text-gray-600">{faq.answer}</p>
                 </div>
               </div>

@@ -12,11 +12,11 @@ import logo from "../assets/Images/logo-egg-png.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-white py-6">
+    <footer className="bg-gray-900 text-white  ">
       <div className="container mx-auto px-4 md:px-8">
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center text-sm space-y-6 md:space-y-0 md:space-x-6">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center text-sm space-y-6 md:space-y-0 md:space-x-8">
           {/* Company Info */}
-          <div className="flex-1">
+          <div className="flex-1 mt-10">
             <img src={logo} alt="Egg Bucket Logo" className="w-36 mb-2" />
             <p className="mb-2">
               At Egg Bucket, we are dedicated to providing fresh and
@@ -35,8 +35,8 @@ const Footer = () => {
               <p>info@eggbucket.com</p>
             </div>
           </div>
-
-          <div className="flex-1">
+          <div className=""></div>
+          <div className="flex-1 ">
             <h3 className="text-lg font-semibold mb-2">Quick Links</h3>
             <ul className="space-y-1">
               <li>
@@ -71,22 +71,24 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className="flex-1">
-            <h3 className="text-lg font-semibold mb-2">
-              Subscribe to Our Newsletter
+          <div className="flex-1 -mt-10 ">
+            <h3 className="text-xs font-thin mb-2">
+              Get the latest news about Egg Bucket's exicting product updates.
             </h3>
             <form>
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="w-full p-1.5 mb-2 border border-gray-400 rounded text-black"
-              />
-              <button
-                type="submit"
-                className="w-full bg-[#f87709] text-white py-1.5 rounded hover:bg-[#f15c00] transition-colors"
-              >
-                Subscribe
-              </button>
+              <div className="flex space-x-2">
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  className="flex-grow p-1.5 mb-2 border border-gray-400 rounded text-black"
+                />
+                <button
+                  type="submit"
+                  className="w-27 mb-2 bg-[#f87709] text-white p-1.5 rounded hover:bg-[#f15c00] transition-colors"
+                >
+                  Subscribe
+                </button>
+              </div>
             </form>
           </div>
         </div>
