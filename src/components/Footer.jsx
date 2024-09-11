@@ -12,7 +12,7 @@ import logo from "../assets/Images/logo-egg-png.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-white  ">
+    <footer className="relative w-full bg-gray-900 text-white z-10">
       <div className="container mx-auto px-4 md:px-8">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center text-sm space-y-6 md:space-y-0 md:space-x-8">
           {/* Company Info */}
@@ -24,56 +24,50 @@ const Footer = () => {
             </p>
             <div className="flex items-center mb-1">
               <FaMapMarkerAlt className="text-[#f87709] mr-2" />
-              <p>123 Egg Lane, Farmville, XY 12345</p>
+              <p>
+                Kacklewalls Nutrition Pvt. Ltd. ITI Layout, HSR,
+                Bengaluru-560068
+              </p>
             </div>
-            <div className="flex items-center mb-1">
-              <FaPhoneAlt className="text-[#f87709] mr-2" />
-              <p>(123) 456-7890</p>
-            </div>
+
             <div className="flex items-center">
               <FaEnvelope className="text-[#f87709] mr-2" />
-              <p>info@eggbucket.com</p>
+              <p>info@eggbucket.in</p>
             </div>
           </div>
-          <div className=""></div>
-          <div className="flex-1 ">
-            <h3 className="text-lg font-semibold mb-2">Quick Links</h3>
-            <ul className="space-y-1">
-              <li>
-                <a href="/" className="hover:text-[#f87709] transition-colors">
-                  Home
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/services"
-                  className="hover:text-[#f87709] transition-colors"
-                >
-                  Services
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/about-us"
-                  className="hover:text-[#f87709] transition-colors"
-                >
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/contact-us"
-                  className="hover:text-[#f87709] transition-colors"
-                >
-                  Contact Us
-                </a>
-              </li>
-            </ul>
+
+          {/* Quick Links */}
+          <div className="flex-1 text-center mt-10 ">
+            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+            <div className="grid grid-cols-2 gap-4 ">
+              <a href="/" className="hover:text-[#f87709]  transition-colors">
+                Home
+              </a>
+              <a
+                href="/careers"
+                className="hover:text-[#f87709] transition-colors"
+              >
+                Career
+              </a>
+              <a
+                href="/ourfounders"
+                className="hover:text-[#f87709] transition-colors"
+              >
+                Our Founders
+              </a>
+              <a
+                href="/contact-us"
+                className="hover:text-[#f87709] transition-colors"
+              >
+                Contact Us
+              </a>
+            </div>
           </div>
 
-          <div className="flex-1 -mt-10 ">
+          {/* Newsletter Signup */}
+          <div className="flex-1 -mt-10">
             <h3 className="text-xs font-thin mb-2">
-              Get the latest news about Egg Bucket's exicting product updates.
+              Get the latest news about Egg Bucket's exciting product updates.
             </h3>
             <form>
               <div className="flex space-x-2">
@@ -98,23 +92,7 @@ const Footer = () => {
           <h3 className="text-lg font-semibold mb-2">Follow Us</h3>
           <div className="flex justify-center space-x-3">
             <a
-              href="https://facebook.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-xl hover:text-[#f87709] transition-colors"
-            >
-              <FaFacebookF />
-            </a>
-            <a
-              href="https://twitter.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-xl hover:text-[#f87709] transition-colors"
-            >
-              <FaTwitter />
-            </a>
-            <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/egg.bucket/?hl=en"
               target="_blank"
               rel="noopener noreferrer"
               className="text-xl hover:text-[#f87709] transition-colors"
@@ -122,7 +100,7 @@ const Footer = () => {
               <FaInstagram />
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/company/eggbucket?originalSubdomain=in"
               target="_blank"
               rel="noopener noreferrer"
               className="text-xl hover:text-[#f87709] transition-colors"

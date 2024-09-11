@@ -1,0 +1,58 @@
+
+@keyframes swingInRight {
+  0% {
+    transform: translateX(100%) rotate(15deg);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(-10%) rotate(-5deg);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateX(0) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes swingInLeft {
+  0% {
+    transform: translateX(-100%) rotate(-15deg);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(10%) rotate(5deg);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateX(0) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+/* Out of view states */
+.out-view-left {
+  opacity: 0;
+  transform: translateX(-100%) rotate(-15deg);
+  transition: opacity 0.5s ease, transform 0.7s ease;
+}
+
+.out-view-right {
+  opacity: 0;
+  transform: translateX(100%) rotate(15deg);
+  transition: opacity 0.5s ease, transform 0.7s ease;
+}
+
+/* In view swing animations */
+.in-view.out-view-left {
+  animation: swingInLeft 1s ease forwards;
+}
+
+.in-view.out-view-right {
+  animation: swingInRight 1s ease forwards;
+}
+
+.timeline-container {
+  position: relative;
+  /* Other styling properties */
+}
+

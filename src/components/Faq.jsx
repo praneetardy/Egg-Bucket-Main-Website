@@ -25,34 +25,35 @@ const FAQSection = () => {
 
   const faqs = [
     {
-      question: "What is Egg Bucket?",
+      question: "What makes our eggs unique?",
       answer:
-        "Egg Bucket is a leading provider of fresh, high-quality eggs delivered straight from our farm to your table. We are committed to sustainability, transparency, and customer satisfaction, ensuring that every egg you receive is packed with nutrition and flavor.",
+        "Our eggs are sourced from local, free-range farms committed to sustainable and ethical practices.",
     },
     {
-      question: "Where are your eggs sourced from?",
+      question: "How do we ensure the safety and quality of our eggs?",
       answer:
-        "Our eggs are sourced from our own farms where we prioritize the well-being of our chickens and adhere to the highest standards of quality and sustainability. This ensures that you receive only the best eggs, produced under optimal conditions.",
+        "We adhere to strict quality control standards at every stage of production, from farm to packaging. Our facilities undergo regular inspections and testing to maintain compliance with food safety regulations.",
     },
     {
-      question: "How do you ensure the quality and freshness of your eggs?",
+      question: "Where can I purchase our eggs?",
       answer:
-        "We have strict quality control measures in place at every stage of production. Our eggs are collected daily, carefully inspected, and immediately packed to preserve their freshness. We also maintain a cold chain during transportation to ensure the eggs reach you in perfect condition.",
+        "Our eggs are available at select grocery stores, farmers' markets, and online platforms. Please refer to our website or contact our customer service team for a list of authorized distributors.",
     },
     {
-      question: "Do you offer organic or free-range eggs?",
+      question: "Can I recycle the egg cartons?",
       answer:
-        "Yes, we offer a variety of eggs, including organic and free-range options. Our organic eggs are produced by hens that are fed an organic diet, and our free-range eggs come from hens that have access to outdoor spaces.",
+        "Yes, our egg cartons are made from recyclable materials. We encourage customers to recycle or reuse them whenever possible to minimize waste and promote environmental sustainability.",
     },
     {
-      question: "How can I place an order?",
+      question: "How can I contact customer support for inquiries or feedback?",
       answer:
-        "You can easily place an order through our website by selecting the eggs you wish to purchase and adding them to your cart. Once you’ve selected your products, proceed to checkout to complete your purchase. We also offer subscription services for regular deliveries.",
+        "For any questions, concerns, or feedback, please reach out to our customer support team via email at kacklewallsnutrition@gmail.com or visit contact us page. We are committed to providing prompt and personalized assistance to ensure your satisfaction.",
     },
     {
-      question: "What payment methods do you accept?",
+      question:
+        "Are there opportunities for partnerships or collaborations with our company?",
       answer:
-        "We accept a variety of payment methods including credit/debit cards, UPI, and net banking.",
+        "We welcome opportunities for partnerships, collaborations, and wholesale inquiries. Please contact our business development team to discuss potential opportunities for mutual growth and success.",
     },
   ];
 

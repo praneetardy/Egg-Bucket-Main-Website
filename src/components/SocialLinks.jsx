@@ -7,27 +7,7 @@ const SocialLinks = () => {
       <ul className="flex flex-col space-y-4 bg-white p-2 rounded-r-lg shadow-lg">
         <li>
           <a
-            href="https://www.facebook.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-gray-600 hover:text-[#f87709] transition-transform duration-300 transform hover:scale-110"
-          >
-            <FaFacebook size={24} />
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://www.twitter.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-gray-600 hover:text-[#f87709] transition-transform duration-300 transform hover:scale-110"
-          >
-            <FaTwitter size={24} />
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://www.instagram.com"
+            href="https://www.instagram.com/egg.bucket/?hl=en"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-600 hover:text-[#f87709] transition-transform duration-300 transform hover:scale-110"
@@ -37,7 +17,7 @@ const SocialLinks = () => {
         </li>
         <li>
           <a
-            href="https://www.linkedin.com"
+            href="https://www.linkedin.com/company/eggbucket?originalSubdomain=in"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-600 hover:text-[#f87709] transition-transform duration-300 transform hover:scale-110"

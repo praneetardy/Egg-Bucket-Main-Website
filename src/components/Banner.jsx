@@ -3,10 +3,10 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import eggTrayImage from "../assets/Images/pngwing.com (2).png";
+import { Link } from "react-router-dom";
 
 const Banner = () => {
   const { scrollY } = useScroll();
-
   const y = useTransform(scrollY, [0, 500], [100, -150]);
 
   useEffect(() => {
@@ -38,7 +38,6 @@ const Banner = () => {
         >
           "Think of an egg, think of Egg Bucket"
         </h5>
-
         <p
           className="text-lg md:text-2xl text-gray-600 max-w-md mx-auto md:mx-0 leading-relaxed"
           data-aos="fade-up"
@@ -47,13 +46,28 @@ const Banner = () => {
           Where freshness meets quality. Delivering eggs straight from the farm
           to your table.
         </p>
-        <button
-          className="self-center md:self-start bg-[#f87709] text-white px-6 py-3 rounded-full transition-transform transform hover:scale-105"
-          data-aos="fade-up"
-          data-aos-delay="600"
-        >
-          About Us
-        </button>
+        <div className="flex justify-center md:justify-start space-x-4">
+          <Link to="/ourfounders">
+            <button
+              className="bg-[#f87709] text-white px-6 py-3 rounded-full transition-transform transform hover:scale-105"
+              data-aos="fade-up"
+              data-aos-delay="600"
+            >
+              About Us
+            </button>
+          </Link>
+          <Link to="/contact-us">
+            {" "}
+            {/* Wrap button with Link */}
+            <button
+              className="bg-none text-[#000000] px-6 py-3 border border-[#f87709] rounded-full transition-all duration-300 hover:bg-[#f87709] hover:text-[#ffffff]"
+              data-aos="fade-up"
+              data-aos-delay="700"
+            >
+              Join as Retailer
+            </button>
+          </Link>
+        </div>
       </div>
 
       <div
