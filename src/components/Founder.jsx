@@ -146,7 +146,7 @@ const Founder = () => {
           </div>
         ))}
 
-        <div className="absolute left-0  top-0 bottom-0 md:-top-5 md:left-0 md:right-0 md:bottom-auto md:h-0.5 w-0.5  md:w-full bg-orange-500 transform md:-translate-y-1/2"></div>
+        <div className="absolute left-0  top-0 bottom-0 md:-top-5 md:left-20 md:right-0 md:bottom-auto md:h-0.5 w-0.5  md:w-10/12 bg-orange-500 transform md:-translate-y-1/2"></div>
       </div>
     </div>
   );
