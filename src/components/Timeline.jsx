@@ -80,7 +80,7 @@ const Timeline = () => {
       <div className="absolute top-10 left-1/2 w-1 h-full bg-white-600 transform -translate-x-1/2 z-0"></div>
       <div
         ref={eggScroller}
-        className="egg-scroller hidden md:block fixed top-20 left-1/2 w-10 h-10 bg-cover bg-center z-0 transform -translate-x-1/2"
+        className="egg-scroller hidden md:block fixed top-20 left-1/2 w-20 h-20 bg-cover bg-center z-0 transform -translate-x-1/2"
         style={{ backgroundImage: `url(${eggImage})` }}
       ></div>
       <div
