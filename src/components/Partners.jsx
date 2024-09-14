@@ -23,9 +23,9 @@ const Partners = () => {
   ];
 
   return (
-    <section className="bg-white py-12">
+    <section className="bg-white py-12 w-full">
       <div className="container mx-auto text-center overflow-hidden">
-        <h2 className="text-4xl font-semibold text-gray-800 mb-8">
+        <h2 className="text-2xl md:text-4xl font-semibold text-gray-800 mb-8">
           Our Trusted Partners
         </h2>
         <div className="relative overflow-hidden">
@@ -39,8 +39,8 @@ const Partners = () => {
                 <img
                   src={partner.logo}
                   alt={partner.name}
-                  className="max-h-20 object-contain mr-20"
-                  style={{ height: "auto", width: "auto", maxWidth: "150px" }}
+                  className="h-12 md:max-h-20 object-contain mr-10 md:mr-20"
+                  style={{ width: "auto", maxWidth: "150px", md: "150px" }}
                 />
               </div>
             ))}
@@ -57,7 +57,7 @@ const Partners = () => {
           }
         }
         .animate-scroll {
-          animation: scroll 30s linear infinite;
+          animation: scroll 10s linear infinite;
         }
       `}</style>
     </section>

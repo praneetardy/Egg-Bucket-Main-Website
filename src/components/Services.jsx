@@ -1,67 +1,64 @@
 import React from "react";
-import {
-  FaTruck,
-  FaEgg,
-  FaDollarSign,
-  FaCogs,
-  FaRecycle,
-  FaRegHandshake,
-} from "react-icons/fa";
+import supplyChainImage from "../assets/Images/supply-chain.jpg";
+import qualityImage from "../assets/Images/quality.jpg";
+import pricingImage from "../assets/Images/pricing.jpg";
+import supportImage from "../assets/Images/support.jpg";
+import "aos/dist/aos.css"; // Ensure AOS library is installed
 
 const Services = () => {
   const services = [
     {
-      icon: <FaRegHandshake className="text-4xl text-[#f87709]" />,
-      title: "Streamlined Supply Chain & Reliable Supply",
-      description:
-        "We simplify the egg supply chain by acting as the crucial link between farms and businesses. Our scalable supply chain ensures timely deliveries of high-quality eggs, meeting your needs, no matter the order size.",
+      title: "Streamlined Egg Supply Chain for Every Need",
+      description: `At Egg Bucket, we simplify the egg supply chain by connecting selected farms directly with businesses and consumers. Our robust system ensures timely deliveries, whether for large-scale B2B needs or personalized B2C orders. By partnering with trusted farms, we guarantee the freshest eggs delivered to you seamlessly and efficiently.`,
+      image: supplyChainImage,
     },
     {
-      icon: <FaEgg className="text-4xl text-[#f87709]" />,
-      title: "Consistent Quality Assurance & Sustainable Sourcing",
-      description:
-        "We maintain the highest standards by selecting the best eggs from trusted farms and ensuring they are produced responsibly. Every egg we deliver is fresh, safe, and ethically sourced.",
+      title: "Uncompromised Quality & Ethical Sourcing",
+      description: `Our commitment to quality is unwavering. Egg Bucket works exclusively with farms that adhere to the highest standards of ethical practices. Every batch of eggs is thoroughly inspected to ensure they meet our stringent quality criteria. We’re dedicated to providing you with fresh, high-quality eggs that are responsibly sourced to support both your business and the environment.`,
+      image: qualityImage,
     },
     {
-      icon: <FaDollarSign className="text-4xl text-[#f87709]" />,
-      title: "Competitive Pricing & Customized Solutions",
-      description:
-        "Leveraging our relationships with multiple farms, we offer competitive pricing while providing customizable solutions tailored to your business’s specific needs, from egg grades to delivery schedules.",
+      title: "Competitive Pricing with Custom Solutions",
+      description: `Egg Bucket offers competitive pricing tailored to meet the diverse needs of our clients. Whether you’re a business requiring bulk orders or a consumer seeking smaller quantities, our flexible pricing and customized solutions are designed to fit your requirements. We collaborate closely with you to provide the best value without compromising on quality.`,
+      image: pricingImage,
     },
     {
-      icon: <FaCogs className="text-4xl text-[#f87709]" />,
-      title: "Dedicated Support & Simplified Ordering",
-      description:
-        "Our dedicated support team ensures smooth operations, while our user-friendly platform makes ordering easy. Track deliveries and manage your egg supply with flexible payment options to suit your business.",
+      title: "Dedicated Support & Easy Ordering Experience",
+      description: `Our customer support team is always available to assist you, ensuring a smooth and hassle-free experience. Egg Bucket’s intuitive ordering platform makes it easy to manage your egg supply, track deliveries, and address any concerns promptly. Whether you’re a business or an individual customer, we are committed to providing exceptional service and support.`,
+      image: supportImage,
     },
   ];
 
   return (
     <section className="bg-[#fff5e6] py-20">
-      <div className="container mx-auto px-6 md:px-12">
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">
-          Why Choose Egg Bucket?
+      <div className="container mx-auto px-6 md:px-12 space-y-16">
+        <h2 className="text-4xl font-bold text-center text-gray-800 mb-16">
+          Why Choose Us?
         </h2>
-        <div className="flex flex-col items-center space-y-12">
-          {services.map((service, index) => (
-            <div
-              key={index}
-              data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
-              data-aos-delay={`${index * 10}`}
-              className={`flex flex-col items-center p-8 rounded-lg shadow-lg border-2 border-[#f87709] w-full max-w-lg transform transition-transform duration-500 ease-in-out ${
-                index % 2 === 0
-                  ? "ml-4 mr-2 md:ml-48 md:mr-4"
-                  : "mr-4 ml-2 md:mr-48 md:ml-4"
-              }`}
-            >
-              <div className="mb-4">{service.icon}</div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-4 text-center">
+        {services.map((service, index) => (
+          <div
+            key={index}
+            className={`flex flex-col md:flex-row ${
+              index % 2 === 0 ? "" : "md:flex-row-reverse"
+            } items-center space-y-8 md:space-y-0 md:space-x-6 `}
+            data-aos="fade-up"
+            data-aos-delay={`${index * 100}`}
+          >
+            <div className="md:w-1/2 flex-shrink-0 flex justify-center items-center hover:scale-105 transition-transform duration-300 ease-in-out">
+              <img
+                src={service.image}
+                alt={service.title}
+                className="w-4/5 h-72 object-cover rounded-lg"
+              />
+            </div>
+            <div className="md:w-1/2">
+              <h3 className="text-3xl font-semibold text-gray-800 mb-6">
                 {service.title}
               </h3>
-              <p className="text-gray-600 text-center">{service.description}</p>
+              <p className="text-lg text-gray-600">{service.description}</p>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
     </section>
   );

@@ -11,6 +11,7 @@ import ContactUsPage from "./pages/ContactUs";
 import Careers from "./pages/Careers";
 import Time from "./pages/Time";
 import Ourfounders from "./pages/OurFounders";
+import FAQ from "./pages/FAQ";
 
 const App = () => {
   return (
@@ -25,6 +26,7 @@ const App = () => {
           <Route path="/careers" element={<Careers />} />
           <Route path="/timeline" element={<Time />} />
           <Route path="/ourfounders" element={<Ourfounders />} />
+          <Route path="/faq" element={<FAQ />} />
 
           {/* Add more routes as needed */}
         </Routes>

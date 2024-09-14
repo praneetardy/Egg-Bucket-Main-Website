@@ -37,7 +37,7 @@ const Footer = () => {
           </div>
 
           {/* Quick Links */}
-          <div className="flex-1 text-center mt-10 ">
+          <div className="flex-1 md:text-center mt-10 ">
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <div className="grid grid-cols-2 gap-4 ">
               <a href="/" className="hover:text-[#f87709]  transition-colors">

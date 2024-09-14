@@ -47,7 +47,7 @@ const Navbar = () => {
             src={logo}
             alt="Egg Bucket Logo"
             className={`transition-all duration-500 ease-in-out ${
-              isScrolled ? "w-48" : "w-52"
+              isScrolled ? "w-32 md:w-48" : "w-36 md:w-52"
             }`}
           />
         </div>
@@ -58,9 +58,9 @@ const Navbar = () => {
             <li>
               <Link
                 to="/"
-                className="relative block px-3 py-2 text-gray-600  group "
+                className="relative block px-3 py-2 text-gray-600 group"
               >
-                <span className="relative z-10 transition-colors group-hover:text-gray-950">
+                <span className="relative z-10 transition-colors text-lg group-hover:text-gray-950">
                   Home
                 </span>
                 <div className="absolute inset-0 bg-[#f87709] bg-opacity-70 h-1.5 rounded-lg top-3/4 transform origin-left scale-x-0 transition-transform duration-500 ease-in-out group-hover:scale-x-100"></div>
@@ -73,7 +73,7 @@ const Navbar = () => {
                 href="#about"
                 className="relative block px-3 py-2 text-gray-600 group flex items-center"
               >
-                <span className="relative z-10 transition-colors group-hover:text-gray-950">
+                <span className="relative z-10 transition-colors text-lg group-hover:text-gray-950">
                   About us
                 </span>
                 {/* Arrow */}
@@ -141,10 +141,21 @@ const Navbar = () => {
             <li>
               <Link
                 to="/careers"
-                className="relative block px-3 py-2 text-gray-600  group "
+                className="relative block px-3 py-2 text-gray-600 group"
               >
-                <span className="relative z-10 transition-colors group-hover:text-gray-950">
+                <span className="relative z-10 transition-colors text-lg group-hover:text-gray-950">
                   Career
+                </span>
+                <div className="absolute inset-0 bg-[#f87709] bg-opacity-70 h-1.5 rounded-lg top-3/4 transform origin-left scale-x-0 transition-transform duration-500 ease-in-out group-hover:scale-x-100"></div>
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/faq"
+                className="relative block px-3 py-2 text-gray-600 group"
+              >
+                <span className="relative z-10 transition-colors text-lg group-hover:text-gray-950">
+                  FAQ's
                 </span>
                 <div className="absolute inset-0 bg-[#f87709] bg-opacity-70 h-1.5 rounded-lg top-3/4 transform origin-left scale-x-0 transition-transform duration-500 ease-in-out group-hover:scale-x-100"></div>
               </Link>
@@ -153,9 +164,9 @@ const Navbar = () => {
             <li>
               <Link
                 to="/contact-us"
-                className="relative block px-3 py-2 text-gray-600  group "
+                className="relative block px-3 py-2 text-gray-600 group"
               >
-                <span className="relative z-10 transition-colors group-hover:text-gray-950">
+                <span className="relative z-10 transition-colors text-lg group-hover:text-gray-950">
                   Contact Us
                 </span>
                 <div className="absolute inset-0 bg-[#f87709] bg-opacity-70 h-1.5 rounded-lg top-3/4 transform origin-left scale-x-0 transition-transform duration-500 ease-in-out group-hover:scale-x-100"></div>
@@ -163,11 +174,11 @@ const Navbar = () => {
             </li>
           </ul>
 
-          <a href="#order" className="hidden md:inline-block">
+          <Link to="#order" className="hidden md:inline-block">
             <button className="bg-[#f87709] text-white px-8 py-3 rounded-full transition-transform transform hover:scale-105 flex items-center space-x-2">
               <span>Order Now</span>
             </button>
-          </a>
+          </Link>
         </div>
 
         {/* Hamburger Menu for Mobile */}
@@ -190,13 +201,13 @@ const Navbar = () => {
         <div className="md:hidden bg-white py-4 px-6">
           <ul className="flex flex-col space-y-4">
             <li>
-              <a
-                href="#home"
+              <Link
+                to="/"
                 className="text-gray-600 hover:text-gray-800 transition-transform transform hover:scale-105"
                 onClick={toggleMenu}
               >
                 Home
-              </a>
+              </Link>
             </li>
             {/* About Us Mobile with Dropdown */}
             <li>
@@ -214,49 +225,49 @@ const Navbar = () => {
               {aboutOpen && (
                 <ul className="pl-4 space-y-2 mt-2">
                   <li>
-                    <a
-                      href="#founders"
+                    <Link
+                      to="/ourfounders"
                       className="text-gray-600 hover:text-gray-800 transition-transform hover:scale-105"
                       onClick={toggleMenu}
                     >
                       Our Founders
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
-                      href="#timeline"
+                    <Link
+                      to="/timeline"
                       className="text-gray-600 hover:text-gray-800 transition-transform hover:scale-105"
                       onClick={toggleMenu}
                     >
                       Timeline
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               )}
             </li>
             <li>
-              <a
-                href="#services"
+              <Link
+                to="/careers"
                 className="text-gray-600 hover:text-gray-800 transition-transform transform hover:scale-105"
                 onClick={toggleMenu}
               >
-                Services
-              </a>
+                Career
+              </Link>
             </li>
             <li>
-              <a
-                href="#contact"
+              <Link
+                to="/contact-us"
                 className="text-gray-600 hover:text-gray-800 transition-transform transform hover:scale-105"
                 onClick={toggleMenu}
               >
                 Contact
-              </a>
+              </Link>
             </li>
           </ul>
 
-          <a href="#order" className="block mt-4">
+          <Link to="#order" className="block mt-4">
             <button className="w-full bg-[#f87709] text-white py-3 rounded-full transition-transform transform hover:scale-105 flex items-center justify-center space-x-2">
-              <span>Admin & Order</span>
+              <span>Order Now</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
@@ -272,7 +283,7 @@ const Navbar = () => {
                 />
               </svg>
             </button>
-          </a>
+          </Link>
         </div>
       )}
     </nav>

@@ -2,21 +2,57 @@ import React, { useEffect, useRef, useState } from "react";
 
 const Howitworks = () => {
   const steps = [
-    { title: "Egg Collection", icon: "🥚" },
-    { title: "Quality Inspection", icon: "🔍" },
-    { title: "Packaging", icon: "📦" },
-    { title: "Transportation", icon: "🚚" },
-    { title: "Delivery", icon: "🏠" },
+    {
+      title: "Egg Collection",
+      icon: "🥚",
+      content:
+        "Our fresh eggs are collected every morning with utmost care, ensuring they stay in the best condition from the farm to your table.",
+      detailedContent:
+        "We prioritize quality by sourcing eggs from our free-range farms where chickens live in a stress-free environment. Each morning, we collect eggs that are handled with care and maintained under optimal conditions to ensure you get the freshest product possible.",
+    },
+    {
+      title: "Quality Inspection",
+      icon: "🔍",
+      content:
+        "Each egg undergoes a thorough quality check to meet our high standards before reaching you.",
+      detailedContent:
+        "Our skilled inspectors carefully examine every egg for any imperfections or cracks. This meticulous process ensures that only the finest quality eggs are selected for you, maintaining our commitment to excellence.",
+    },
+    {
+      title: "Packaging",
+      icon: "📦",
+      content:
+        "We use eco-friendly packaging to protect your eggs and minimize our environmental footprint.",
+      detailedContent:
+        "Our cartons are made from 100% recycled materials, reflecting our dedication to sustainability. The packaging is designed to safeguard the eggs during transit while reducing our environmental impact, so you can feel good about your purchase.",
+    },
+    {
+      title: "Transportation",
+      icon: "🚚",
+      content:
+        "Our transport system ensures your eggs stay fresh from farm to your doorstep.",
+      detailedContent:
+        "Equipped with advanced climate control technology, our delivery vehicles maintain the perfect temperature for your eggs throughout the journey. This ensures that they arrive in pristine condition, ready for you to enjoy.",
+    },
+    {
+      title: "Delivery",
+      icon: "🏠",
+      content:
+        "Experience the convenience of having fresh eggs delivered right to your door.",
+      detailedContent:
+        "We partner with reliable local couriers to offer fast and dependable delivery services. Your eggs arrive fresh and on time, so you can enjoy them at their best without any hassle.",
+    },
   ];
 
   const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth >= 768);
+  const [hoveredStep, setHoveredStep] = useState(null);
 
   const pathRef = useRef(null);
   const containerRef = useRef(null);
 
   useEffect(() => {
     const handleResize = () => {
-      setIsLargeScreen(window.innerWidth >= 768); // Update based on md breakpoint
+      setIsLargeScreen(window.innerWidth >= 768);
     };
 
     window.addEventListener("resize", handleResize);
@@ -24,7 +60,6 @@ const Howitworks = () => {
     const path = pathRef.current;
     const length = path.getTotalLength();
 
-    // Initially set up the stroke dash array and dash offset for solid line
     path.style.strokeDasharray = length;
     path.style.strokeDashoffset = length;
 
@@ -35,7 +70,7 @@ const Howitworks = () => {
           path.style.strokeDashoffset = "0";
 
           path.addEventListener("transitionend", () => {
-            path.style.strokeDasharray = "5,5"; // Switch to dotted after transition
+            path.style.strokeDasharray = "5,5";
           });
         }
       });
@@ -58,9 +93,9 @@ const Howitworks = () => {
   }, []);
 
   return (
-    <div className="min-h-screen min-w-screen flex flex-col items-center justify-center">
+    <div className="min-h-screen  min-w-screen flex flex-col items-center justify-center">
       {/* Main Heading */}
-      <div className="w-full text-center -mt-64 mb-56">
+      <div className="w-full text-center md:-mt-64 -mt-96 md:mb-56 mb-72">
         <h1 className="text-5xl font-bold">How It Works</h1>
       </div>
 
@@ -71,8 +106,7 @@ const Howitworks = () => {
       >
         {/* Line */}
         <div className="absolute w-full h-full flex items-center justify-center pointer-events-none">
-          {/* Horizontal line for larger screens */}
-          {isLargeScreen && (
+          {isLargeScreen ? (
             <svg
               width="100%"
               height="300"
@@ -100,23 +134,14 @@ const Howitworks = () => {
               </defs>
               <path
                 ref={pathRef}
-                d="
-    M 100,150
-    C 180,50 240,50 320,150
-    C 400,250 460,250 540,150
-    C 620,50 680,50 760,150
-    C 840,250 900,250 980,150
-    C 1060,50 1120,50 1200,150"
+                d="M 100,150 C 180,50 240,50 320,150 C 400,250 460,250 540,150 C 620,50 680,50 760,150 C 840,250 900,250 980,150 C 1060,50 1120,50 1200,150"
                 stroke="black"
                 strokeWidth="2"
                 fill="none"
                 markerEnd="url('#arrowhead')"
               />
             </svg>
-          )}
-
-          {/* Vertical line for small screens */}
-          {!isLargeScreen && (
+          ) : (
             <svg
               width="100"
               height="1200"
@@ -142,7 +167,7 @@ const Howitworks = () => {
               </defs>
               <path
                 ref={pathRef}
-                d="M 50,50 L 50,550" // Vertical line path for small screens
+                d="M 50,50 L 50,550"
                 stroke="black"
                 strokeWidth="2"
                 fill="none"
@@ -156,17 +181,19 @@ const Howitworks = () => {
         {steps.map((step, index) => (
           <div
             key={index}
-            className="absolute z-10 flex flex-col items-center text-center"
+            className="absolute z-10 flex flex-col items-center text-center cursor-pointer"
+            onMouseEnter={() => setHoveredStep(index)}
+            onMouseLeave={() => setHoveredStep(null)}
             style={{
               left: isLargeScreen ? `${20 * index + 14}%` : "50%",
               top: isLargeScreen
-                ? `${index % 2 === 0 ? "calc(50% + 5px)" : "calc(50% + 120px)"}`
+                ? `${index % 2 === 0 ? "calc(50% + 5px)" : "calc(50% + 120px)"}` // Staggering for large screens
                 : `${100 * index - 200}px`,
               transform: "translate(-50%, -50%)",
             }}
           >
             {isLargeScreen && (
-              <p className="mb-16 text-sm md:text-base font-medium">
+              <p className="mb-6 text-sm md:text-base font-medium">
                 {step.title}
               </p>
             )}
@@ -184,6 +211,24 @@ const Howitworks = () => {
               >
                 {step.title}
               </p>
+            )}
+
+            {/* Information card that appears on hover with transition effect */}
+            {hoveredStep === index && (
+              <div
+                className={`mt-6 w-64 bg-white shadow-lg rounded-lg border-2 border-orange-200 p-4 text-left transition-transform transition-opacity duration-500 ease-in-out ${
+                  hoveredStep === index
+                    ? "opacity-100 scale-100"
+                    : "opacity-0 scale-95"
+                }`}
+              >
+                <h3 className="text-lg font-semibold mb-2">
+                  {step.title}{" "}
+                  <span className="text-orange-400">{step.icon}</span>
+                </h3>
+                <p className="text-sm mb-2">{step.content}</p>
+                <p className="text-xs text-gray-500">{step.detailedContent}</p>
+              </div>
             )}
           </div>
         ))}

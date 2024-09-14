@@ -39,7 +39,7 @@ const Timeline = () => {
     const containerHeight = timelineContainer.current.offsetHeight;
     const windowHeight = window.innerHeight;
     const maxScrollTop = containerHeight - windowHeight;
-    const slowFactor = 0.37;
+    const slowFactor = 0.47;
     const eggScrollHeight = containerHeight - 200; // Adjust to control where the egg should stop
 
     if (eggScroller.current) {
