@@ -2,11 +2,14 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import Founder from "../components/Founder";
 import Footer from "../components/Footer";
-import FounderSection from "../components/FounderInfo";
+import FounderInfo from "../components/FounderInfo";
+import FounderMessage from "../components/FounderMessage";
 const Ourfounders = () => {
   return (
     <div>
-      <FounderSection />
+      <FounderInfo />
+      <FounderMessage />
+
       <Founder />
     </div>
   );

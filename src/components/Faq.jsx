@@ -59,22 +59,22 @@ const FAQSection = () => {
 
   return (
     <section className="bg-white py-12">
-      <div className="container mx-auto px-6 md:px-12">
-        <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-8">
           Frequently Asked Questions (FAQ)
         </h2>
-        <div className="space-y-6 max-w-3xl  mx-auto">
+        <div className="space-y-6 max-w-3xl mx-auto">
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="bg-white border-b border-grey-900 rounded-lg transition-all duration-500 overflow-hidden"
+              className="bg-white border-b border-grey-300 rounded-lg transition-all duration-500 overflow-hidden"
             >
               <button
                 onClick={() => toggleFAQ(index)}
-                className="w-full flex justify-between items-center px-6 py-4 text-left text-gray-800  focus:outline-none"
+                className="w-full flex justify-between items-center px-4 md:px-6 py-3 md:py-4 text-left text-gray-800 focus:outline-none"
               >
-                <span className="text-lg">{faq.question}</span>
-                <FaPlus className="text-[#f87709] "></FaPlus>
+                <span className="text-base md:text-lg">{faq.question}</span>
+                <FaPlus className="text-[#f87709]" />
               </button>
               <div
                 ref={(el) => (answerRefs.current[index] = el)}
@@ -83,8 +83,10 @@ const FAQSection = () => {
                   maxHeight: `${maxHeight[index] || 0}px`,
                 }}
               >
-                <div className="px-6 pb-4 bg-white rounded-b-lg ">
-                  <p className="text-gray-600">{faq.answer}</p>
+                <div className="px-4 md:px-6 pb-4 bg-white rounded-b-lg">
+                  <p className="text-sm md:text-base text-gray-600">
+                    {faq.answer}
+                  </p>
                 </div>
               </div>
             </div>
