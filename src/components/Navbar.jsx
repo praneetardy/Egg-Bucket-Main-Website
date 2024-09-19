@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { FaTimes, FaBars, FaChevronDown } from "react-icons/fa";
+
 import { MdShoppingCart } from "react-icons/md"; // Importing a shopping cart icon
 import logo from "../assets/images/logo-egg-png.png";
 import { Link } from "react-router-dom";
