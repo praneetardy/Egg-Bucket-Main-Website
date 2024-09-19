@@ -114,7 +114,7 @@ const Founder = () => {
         style={{ backgroundImage: `url(${omlet})` }}
       ></div>
 
-      <h1 className="text-3xl font-bold mb-8 mt-60 text-center relative">
+      <h1 className="text-3xl font-bold mb-8 md:mt-60 mt-20 text-center relative">
         KACKLEWALLS NUTRITION PVT LIMITED
         <div className="absolute left-1/2 transform -translate-x-1/2 top-full h-8 border-l-4 border-orange-500"></div>
       </h1>
@@ -127,7 +127,7 @@ const Founder = () => {
       </div>
 
       {/* Flex column for <md and flex row for >=md */}
-      <div className="flex flex-col md:flex-row md:justify-center md:space-x-8 space-y-4 md:space-y-0 relative overflow-x-auto md:overflow-visible">
+      <div className="flex flex-col md:flex-row md:justify-center md:space-x-0 space-y-4 md:space-y-0 relative overflow-x-auto md:overflow-visible">
         {initialTreeData[0].children.map((department, index) => (
           <div
             key={index}
@@ -145,8 +145,9 @@ const Founder = () => {
             <ListItem item={department} />
           </div>
         ))}
+        {/*  line  */}
 
-        <div className="absolute left-0  top-0 bottom-0 md:-top-5 md:left-20 md:right-0 md:bottom-auto md:h-0.5 w-0.5  md:w-10/12 bg-orange-500 transform md:-translate-y-1/2"></div>
+        <div className="absolute left-0  top-0 bottom-0 md:-top-5 md:left-16 md:right-0 md:bottom-auto md:h-0.5 w-0.5  md:w-11/12 bg-orange-500 transform md:-translate-y-1/2"></div>
       </div>
     </div>
   );

@@ -9,6 +9,7 @@ import {
   FaEnvelope,
 } from "react-icons/fa";
 import logo from "../assets/Images/logo-egg-png.png";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -32,7 +33,7 @@ const Footer = () => {
 
             <div className="flex items-center">
               <FaEnvelope className="text-[#f87709] mr-2" />
-              <p>info@eggbucket.in</p>
+              <p>support@eggbucket.in</p>
             </div>
           </div>
 
@@ -40,27 +41,26 @@ const Footer = () => {
           <div className="flex-1 md:text-center mt-10 ">
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <div className="grid grid-cols-2 gap-4 ">
-              <a href="/" className="hover:text-[#f87709]  transition-colors">
-                Home
-              </a>
-              <a
-                href="/careers"
-                className="hover:text-[#f87709] transition-colors"
-              >
-                Career
-              </a>
-              <a
-                href="/ourfounders"
-                className="hover:text-[#f87709] transition-colors"
-              >
-                Our Founders
-              </a>
-              <a
-                href="/contact-us"
-                className="hover:text-[#f87709] transition-colors"
-              >
-                Contact Us
-              </a>
+              <Link to="/">
+                <button className="hover:text-[#f87709]  transition-colors">
+                  Home
+                </button>
+              </Link>
+              <Link to="/careers">
+                <button className="hover:text-[#f87709] transition-colors">
+                  Career
+                </button>
+              </Link>
+              <Link to="/ourfounders">
+                <button className="hover:text-[#f87709] transition-colors">
+                  Our Founders
+                </button>
+              </Link>
+              <Link to="contact-us">
+                <button className="hover:text-[#f87709] transition-colors">
+                  Contact Us
+                </button>
+              </Link>
             </div>
           </div>
 

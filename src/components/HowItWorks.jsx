@@ -93,9 +93,9 @@ const Howitworks = () => {
   }, []);
 
   return (
-    <div className="min-h-screen  min-w-screen flex flex-col items-center justify-center">
+    <div className="min-h-screen min-w-screen flex flex-col items-center justify-center">
       {/* Main Heading */}
-      <div className="w-full text-center md:-mt-64 -mt-96 md:mb-56 mb-72">
+      <div className="w-full text-center -mt-64 mb-64">
         <h1 className="text-5xl font-bold">How It Works</h1>
       </div>
 
