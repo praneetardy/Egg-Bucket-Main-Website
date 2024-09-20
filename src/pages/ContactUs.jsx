@@ -110,7 +110,7 @@ const ContactUs = () => {
             Fill out the form below, and we’ll get back to you shortly.
           </p>
           <form
-            action="https://formspree.io/f/myzgvdkq"
+            action="https://formspree.io/f/xkgwljng"
             method="POST"
             className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6"
           >
