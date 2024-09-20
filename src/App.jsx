@@ -17,6 +17,7 @@ import Careers from "./pages/Careers";
 import Time from "./pages/Time";
 import Ourfounders from "./pages/OurFounders";
 import FAQ from "./pages/FAQ";
+import Header from "./components/Header";
 
 const App = () => {
   const location = useLocation();
@@ -24,21 +25,7 @@ const App = () => {
 
   return (
     <div>
-      {!isB2CPage && <Navbar />}
-      <ScrollToTop />
-
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/contact-us" element={<ContactUsPage />} />
-        <Route path="/careers" element={<Careers />} />
-        <Route path="/timeline" element={<Time />} />
-        <Route path="/ourfounders" element={<Ourfounders />} />
-        <Route path="/faq" element={<FAQ />} />
-        <Route path="/b2c" element={<B2CHome />} />
-        {/* Add more routes as needed */}
-      </Routes>
-
-      {!isB2CPage && <Footer />}
+      <Header />
     </div>
   );
 };

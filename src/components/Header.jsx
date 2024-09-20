@@ -6,6 +6,7 @@ import {
   AiOutlineClose,
   AiOutlineDown,
   AiOutlinePlus,
+  AiOutlineEnvironment, // Importing the location icon
 } from "react-icons/ai";
 
 const Header = () => {
@@ -48,6 +49,10 @@ const Header = () => {
 
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center space-x-4">
+            <AiOutlineEnvironment
+              className="text-gray-600 hover:text-orange-500 text-2xl"
+              onClick={toggleAddressPopup}
+            />
             <AiOutlineShoppingCart
               size={25}
               className="cursor-pointer text-gray-600 hover:text-orange-500 transition-transform transform hover:scale-110"
@@ -85,6 +90,7 @@ const Header = () => {
 
         {/* Address Display Component */}
         <div className="absolute lg:right-[200px] md:right-[170px]">
+          {/* Desktop Address Popup */}
           <div
             className="hidden md:flex items-center space-x-2 cursor-pointer"
             onClick={toggleAddressPopup}
@@ -97,8 +103,10 @@ const Header = () => {
 
           {/* Address Popup */}
           {showAddressPopup && (
-            <div className="absolute  mt-9 left-0 w-[370px] md:right-[150px] bg-white p-6 rounded-lg shadow-lg z-20">
-              <h2 className="text-xl font-bold mb-4">Select an Address</h2>
+            <div className="md:absolute mt-[70px] md:mt-9 w-[300px]  md:w-[370px]  md:right-[150px] bg-white p-6 rounded-lg shadow-lg z-20">
+              <h2 className="text-lg md:text-xl font-bold mb-4">
+                Select an Address
+              </h2>
               <ul className="space-y-3">
                 {[
                   "Patli Gali, Mota Bazzar, Jammu",
@@ -107,7 +115,7 @@ const Header = () => {
                   <li
                     key={index}
                     onClick={() => handleAddressSelect(address)}
-                    className={`cursor-pointer p-2 rounded-md transition-all duration-300 transform ${
+                    className={`cursor-pointer p-2 rounded-md transition-all duration-300 md:text-lg text-sm transform ${
                       temporaryAddress === address
                         ? "border-2 border-orange-500 text-gray-800 scale-105"
                         : "bg-gray-200 text-gray-800 hover:border-orange-400 hover:border-2"
@@ -123,7 +131,7 @@ const Header = () => {
               </ul>
               <div className="mt-4 flex justify-between">
                 <button
-                  className="bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600 transition-transform duration-300 flex items-center transform hover:scale-105"
+                  className="bg-green-500 md:text-lg text-sm text-white px-4 py-2 rounded-md hover:bg-green-600 transition-transform duration-300 flex items-center transform hover:scale-105"
                   onClick={() =>
                     alert("Add new address functionality coming soon!")
                   }
@@ -131,14 +139,14 @@ const Header = () => {
                   <AiOutlinePlus className="mr-2" /> Add New Address
                 </button>
                 <button
-                  className="bg-orange-500 text-white px-4 py-2 rounded-md hover:bg-orange-600 transition-transform transform hover:scale-105 duration-300"
+                  className="bg-orange-500 md:text-lg text-sm text-white px-4 py-2 rounded-md hover:bg-orange-600 transition-transform transform hover:scale-105 duration-300"
                   onClick={saveSelectedAddress}
                 >
                   Save
                 </button>
               </div>
               <button
-                className="mt-4 w-full bg-gray-200 text-gray-800 px-4 py-2 rounded-md hover:bg-gray-300 transition-transform transform hover:scale-105 duration-300"
+                className="mt-4 w-full md:text-lg text-sm bg-gray-200 text-gray-800 px-4 py-2 rounded-md hover:bg-gray-300 transition-transform transform hover:scale-105 duration-300"
                 onClick={toggleAddressPopup}
               >
                 Close
@@ -147,7 +155,7 @@ const Header = () => {
           )}
         </div>
 
-        {/* Search, Cart, and Login for Desktop */}
+        {/* Cart, and Login for Desktop */}
         <div className="hidden md:flex items-center md:space-x-3 lg:space-x-6 mx-3">
           <AiOutlineShoppingCart
             size={25}
