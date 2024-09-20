@@ -6,7 +6,7 @@ import {
   AiOutlineClose,
   AiOutlineDown,
   AiOutlinePlus,
-  AiOutlineEnvironment, 
+  AiOutlineEnvironment, // Importing the location icon
 } from "react-icons/ai";
 
 const Header = () => {
