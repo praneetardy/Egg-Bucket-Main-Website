@@ -57,7 +57,7 @@ const AboutUs = () => {
       >
         <div className="text-center mb-12 relative z-10">
           <motion.h2
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-[#f87709] relative z-20"
+            className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-[#f87709] relative z-20"
             style={{ filter: blur, opacity }}
             initial={{ opacity: 10 }}
             animate={controls}
@@ -67,7 +67,7 @@ const AboutUs = () => {
           </motion.h2>
 
           <motion.span
-            className="absolute -top-8 md:left-1/2 left-0 transform -translate-x-1/2 -translate-y-1/2 text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold text-[#000000] opacity-20 pointer-events-none z-10"
+            className="absolute -top-6 md:left-1/3 left-0 transform -translate-x-1/2 -translate-y-1/2 text-7xl sm:text-7xl md:text-8xl lg:text-9xl font-bold text-[#000000] opacity-20 pointer-events-none z-10"
             style={{ x }}
           >
             Why
@@ -102,7 +102,7 @@ const AboutUs = () => {
 
           {/* Adjust Text for Medium Screens */}
           <motion.div
-            className="w-full md:w-full lg:w-full md:text-left space-y-6 sm:space-y-8 md:pl-8 z-20 relative bg-[#f87709] shadow-xl rounded-lg md:rounded-lg lg:rounded-l-full p-6 sm:p-8 md:p-10 lg:p-16 lg:pl-24 transition-transform transform hover:scale-105 hover:shadow-2xl overflow-hidden"
+            className="w-full md:w-full lg:w-full md:text-left space-y-6 sm:space-y-8 md:pl-8 z-20 relative bg-[#f87709] shadow-xl rounded-lg md:rounded-lg lg:rounded-lg p-6 sm:p-8 md:p-10 lg:p-16 lg:pl-24 transition-transform transform hover:scale-105 hover:shadow-2xl overflow-hidden"
             initial="hidden"
             animate={controls}
             exit="exit"
@@ -115,30 +115,38 @@ const AboutUs = () => {
 
             {/* Expanded Text Content */}
             <motion.p
-              className="text-sm sm:text-base md:text-lg lg:text-xl text-white leading-relaxed z-10 relative"
+              className="text-base sm:text-base md:text-lg lg:text-xl text-white leading-relaxed z-10 relative"
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.3 }}
             >
-              At Egg Bucket, we are passionate about providing you with the
-              freshest, most nutritious eggs. Each egg comes from hens raised in
-              open, stress-free environments, ensuring the highest quality and
-              flavor in every bite. Whether you're using them in baking,
-              breakfast, or cooking gourmet meals, you can trust that our eggs
-              are a premium product with the environment and animal welfare in
-              mind.
+              At Egg Bucket, we take pride in offering the freshest,
+              high-quality eggs sourced from farms that prioritize both
+              sustainability and animal welfare. Our eggs are more than a
+              product; they’re a symbol of our commitment to nurturing the
+              planet and providing your family with nutrient-rich food.
             </motion.p>
             <motion.p
-              className="text-sm sm:text-base md:text-lg lg:text-xl text-white leading-relaxed z-10 relative"
+              className="text-base sm:text-base md:text-lg lg:text-xl text-white leading-relaxed z-10 relative"
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.3 }}
             >
-              But we’re more than just an egg supplier. At Egg Bucket, we stand
-              for sustainability and innovation in farming practices. Our
-              commitment to eco-friendly solutions helps us minimize waste,
-              conserve resources, and ensure that our practices are as green as
-              possible. We believe that small changes can make a big impact, and
-              we aim to be a leader in the industry by proving that ethical
-              farming and high-quality products can go hand-in-hand.
+              We understand that today’s consumers are more mindful than ever
+              about where their food comes from. That’s why our hens are raised
+              in open spaces, fed a natural diet, and treated with care. We
+              believe in going beyond the ordinary—each step of our process is
+              crafted to ensure that the eggs we deliver are fresh, delicious,
+              and ethical.
+            </motion.p>
+            <motion.p
+              className="text-base sm:text-base md:text-lg lg:text-xl text-white leading-relaxed z-10 relative"
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.3 }}
+            >
+              Our approach to farming combines traditional methods with modern
+              technology, allowing us to be efficient without compromising on
+              our values. We are not just egg producers, but pioneers of
+              sustainable agriculture, and we are proud to help you make
+              informed choices for your kitchen and your world.
             </motion.p>
           </motion.div>
         </div>

@@ -96,7 +96,9 @@ const Howitworks = () => {
     <div className="min-h-screen min-w-screen flex flex-col items-center justify-center">
       {/* Main Heading */}
       <div className="w-full text-center -mt-64 mb-64">
-        <h1 className="text-5xl font-bold">How It Works</h1>
+        <h1 className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">
+          How It Works
+        </h1>
       </div>
 
       {/* Section Container */}
@@ -187,9 +189,10 @@ const Howitworks = () => {
             style={{
               left: isLargeScreen ? `${20 * index + 14}%` : "50%",
               top: isLargeScreen
-                ? `${index % 2 === 0 ? "calc(50% + 5px)" : "calc(50% + 120px)"}` // Staggering for large screens
+                ? `${index % 2 === 0 ? "calc(50% + 5px)" : "calc(50% + 120px)"}`
                 : `${100 * index - 200}px`,
               transform: "translate(-50%, -50%)",
+              zIndex: hoveredStep === index ? 10 : 1,
             }}
           >
             {isLargeScreen && (
@@ -205,7 +208,7 @@ const Howitworks = () => {
             {/* Title for small screens */}
             {!isLargeScreen && (
               <p
-                className={`text-sm md:text-base font-medium -mt-16 ${
+                className={`text-sm md:text-base font-medium -mt-16  ${
                   index % 2 === 0 ? "ml-56 " : "mr-48"
                 }`}
               >
@@ -216,11 +219,18 @@ const Howitworks = () => {
             {/* Information card that appears on hover with transition effect */}
             {hoveredStep === index && (
               <div
-                className={`mt-6 w-64 bg-white shadow-lg rounded-lg border-2 border-orange-200 p-4 text-left transition-transform transition-opacity duration-500 ease-in-out ${
+                className={`mt-6 w-64 bg-white shadow-lg rounded-lg border-2 border-orange-200 p-4 text-left transition-transform transition-opacity duration-500 ease-in-out z-50 ${
                   hoveredStep === index
                     ? "opacity-100 scale-100"
                     : "opacity-0 scale-95"
                 }`}
+                style={{
+                  position: "absolute",
+                  top: isLargeScreen ? "100%" : "calc(100% + 20px)",
+                  left: "50%",
+                  transform: "translateX(-50%)",
+                  zIndex: 50,
+                }}
               >
                 <h3 className="text-lg font-semibold mb-2">
                   {step.title}{" "}

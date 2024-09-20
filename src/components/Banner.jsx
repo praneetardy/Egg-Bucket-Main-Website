@@ -26,20 +26,20 @@ const Banner = () => {
         data-aos="fade-right"
       >
         <h1
-          className="text-3xl sm:text-4xl md:text-6xl font-extrabold text-gray-800 leading-tight tracking-tight"
+          className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-800 leading-tight tracking-tight"
           data-aos="fade-up"
         >
           Welcome to Egg Bucket
         </h1>
         <h5
-          className="text-sm sm:text-md md:text-2xl font-semibold text-[#f87709]"
+          className="text-lg sm:text-lg md:text-2xl lg:text-3xl font-semibold text-[#f87709]"
           data-aos="fade-up"
           data-aos-delay="200"
         >
-          "Think of an egg, think of Egg Bucket"
+          "Think of an egg, Think of EggBucket!"
         </h5>
         <p
-          className="text-sm sm:text-md md:text-2xl text-gray-600 max-w-full sm:max-w-md mx-auto md:mx-0 leading-relaxed"
+          className="text-base sm:text-base md:text-lg lg:text-xl text-gray-600 max-w-full sm:max-w-md mx-auto md:mx-0 leading-relaxed"
           data-aos="fade-up"
           data-aos-delay="400"
         >
@@ -49,7 +49,7 @@ const Banner = () => {
         <div className="flex flex-col sm:flex-row justify-center md:justify-start space-y-3 sm:space-y-0 sm:space-x-4 mt-4">
           <Link to="/ourfounders">
             <button
-              className="bg-[#f87709] text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full transition-transform transform hover:scale-105"
+              className="bg-[#f87709] text-white text-base px-4 sm:px-6 py-2 sm:py-3 rounded-full transition-transform transform hover:scale-105"
               data-aos="fade-up"
               data-aos-delay="600"
             >
@@ -58,7 +58,7 @@ const Banner = () => {
           </Link>
           <Link to="/contact-us">
             <button
-              className="bg-none text-[#000000] px-4 sm:px-6 py-2 sm:py-3 border border-[#f87709] rounded-full transition-all duration-300 hover:bg-[#f87709] hover:text-white"
+              className="bg-none text-[#000000] text-base px-4 sm:px-6 py-2 sm:py-3 border border-[#f87709] rounded-full transition-all duration-300 hover:bg-[#f87709] hover:text-white"
               data-aos="fade-up"
               data-aos-delay="700"
             >

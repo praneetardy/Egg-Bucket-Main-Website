@@ -59,7 +59,7 @@ const Timeline = () => {
 
   return (
     <div
-      className="relative min-h-screen w-full"
+      className="relative min-h-screen w-full py-10"
       style={{
         background: "linear-gradient(135deg, #fef9e7 0%, #f7f2e4 100%)",
       }}
@@ -158,6 +158,12 @@ const Timeline = () => {
             contents:
               "Kacklewalls Nutrition Private Limited files its provisional Annual Returns and Financial Statements.",
           },
+          {
+            year: "March 2023 - Present",
+            goal: "Continued Expansion",
+            contents:
+              "Egg Bucket is committed to capturing more cities and delivering top-quality products to its customers across the region.",
+          },
         ].map((item, index) => (
           <div
             key={index}
@@ -168,7 +174,7 @@ const Timeline = () => {
                 : "self-start out-view-right"
             }`}
           >
-            <time className="block absolute px-2  left-16 -top-3 text-base text-white bg-orange-500  border rounded-md">
+            <time className="block absolute px-2  left-16 -top-3 text-base text-white bg-orange-500 border rounded-md">
               {item.year}
             </time>
             <p className="text-md">{item.goal}</p>

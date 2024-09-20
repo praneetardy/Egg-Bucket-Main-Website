@@ -9,16 +9,18 @@ const ListItem = ({ item }) => {
     <div
       className={`ml-4 border ${
         isOpen ? "border-orange-500 bg-white" : "border-gray-300 bg-orange-500"
-      } shadow-md p-4 rounded-md transition-colors duration-300 mb-5`}
+      } shadow-md p-4 rounded-md transition-colors duration-300 mb-5 flex justify-center items-center flex-col`}
     >
       <div
         className="cursor-pointer flex items-center space-x-2"
         onClick={() => setIsOpen(!isOpen)}
       >
         {hasChildren && (
-          <span className="text-lg font-bold">{isOpen ? "-" : "+"}</span>
+          <span className="text-lg  font-bold">{isOpen ? "-" : "+"}</span>
         )}
-        <span className="text-gray-700 font-semibold">{item.name}</span>
+        <span className="text-gray-700 text-center font-semibold">
+          {item.name}
+        </span>
       </div>
       {hasChildren && isOpen && (
         <div className="ml-4 mt-2">
@@ -104,7 +106,7 @@ const initialTreeData = [
 const Founder = () => {
   return (
     <div
-      className="relative min-h-screen w-full flex flex-col items-center overflow-hidden"
+      className="relative min-h-screen w-full flex flex-col px-12 items-center overflow-hidden"
       style={{
         background: "linear-gradient(135deg, #fef9e7 0%, #f7f2e4 100%)",
       }}
@@ -114,7 +116,7 @@ const Founder = () => {
         style={{ backgroundImage: `url(${omlet})` }}
       ></div>
 
-      <h1 className="text-3xl font-bold mb-8 md:mt-60 mt-20 text-center relative">
+      <h1 className="text-3xl font-bold mb-8 mt-60 text-center relative">
         KACKLEWALLS NUTRITION PVT LIMITED
         <div className="absolute left-1/2 transform -translate-x-1/2 top-full h-8 border-l-4 border-orange-500"></div>
       </h1>
@@ -127,27 +129,31 @@ const Founder = () => {
       </div>
 
       {/* Flex column for <md and flex row for >=md */}
-      <div className="flex flex-col md:flex-row md:justify-center md:space-x-0 space-y-4 md:space-y-0 relative overflow-x-auto md:overflow-visible">
-        {initialTreeData[0].children.map((department, index) => (
-          <div
-            key={index}
-            className={`text-center relative mb-8 md:mb-0 ${
-              index === initialTreeData[0].children.length - 1 ? "md:mr-8" : ""
-            }`}
-          >
+      <div className="relative overflow-x-auto md:overflow-visible w-full max-w-full px-4">
+        <div className="flex flex-col xl:flex-row  xl:justify-around  xl:space-x-0 space-y-4  xl:space-y-0 relative overflow-x-auto xl:overflow-visible">
+          {initialTreeData[0].children.map((department, index) => (
             <div
-              className={`absolute transform -translate-x-1/2
-                md:left-1/2 md:-top-5 md:h-8 md:w-0.5 md:border-l-4
+              key={index}
+              className={`text-center relative mb-8 xl:mb-0 ${
+                index === initialTreeData[0].children.length - 1
+                  ? "xl:mr-8"
+                  : ""
+              }`}
+            >
+              <div
+                className={`absolute transform -translate-x-1/2
+                xl:left-1/2 xl:-top-5 xl:h-8 xl:w-0.5 xl:border-l-4
                 -left-5 top-1/2  h-0.5 w-20 border-t-4
                 border-orange-500
-                md:border-t-0`}
-            ></div>
-            <ListItem item={department} />
-          </div>
-        ))}
-        {/*  line  */}
+                xl:border-t-0`}
+              ></div>
+              <ListItem item={department} />
+            </div>
+          ))}
+          {/*  line  */}
 
-        <div className="absolute left-0  top-0 bottom-0 md:-top-5 md:left-16 md:right-0 md:bottom-auto md:h-0.5 w-0.5  md:w-11/12 bg-orange-500 transform md:-translate-y-1/2"></div>
+          <div className="absolute left-0  top-0 bottom-0 xl:-top-5 xl:left-16 xl:right-0 xl:bottom-auto xl:h-0.5 w-0.5  xl:w-11/12 bg-orange-500 transform xl:-translate-y-1/2"></div>
+        </div>
       </div>
     </div>
   );

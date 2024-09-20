@@ -25,7 +25,7 @@ const Partners = () => {
   return (
     <section className="bg-white py-12 w-full">
       <div className="container mx-auto text-center overflow-hidden">
-        <h2 className="text-2xl md:text-4xl font-semibold text-gray-800 mb-8">
+        <h2 className="text-3xl md:text-4xl font-semibold text-gray-800 mb-8">
           Our Trusted Partners
         </h2>
         <div className="relative overflow-hidden">

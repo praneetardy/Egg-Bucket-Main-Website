@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import founderPhoto from "../assets/Images/founder-photo.jpg";
-import cofounderPhoto from "../assets/Images/cofounder-photo.jpg";
+import founderPhoto from "../assets/Images/male-avatar.png";
+import cofounderPhoto from "../assets/Images/male-avatar.png";
 import backgroundImage from "../assets/Images/orange.jpeg";
 
 const FounderMessage = () => {

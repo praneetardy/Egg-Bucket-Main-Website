@@ -32,7 +32,7 @@ const Services = () => {
   return (
     <section className="bg-[#fff5e6] py-20">
       <div className="container mx-auto px-6 md:px-12 space-y-16">
-        <h2 className="text-4xl font-bold text-center text-gray-800 mb-16">
+        <h2 className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-center text-gray-800 mb-16">
           Why Choose Us?
         </h2>
         {services.map((service, index) => (
