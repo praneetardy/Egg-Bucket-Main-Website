@@ -37,7 +37,7 @@ const Header = () => {
   };
 
   return (
-    <nav className="w-full bg-white shadow-md fixed top-0 z-10">
+    <nav className="w-full bg-white shadow-md fixed top-0 z-1000">
       <div className="flex flex-col md:flex-row justify-between items-center px-4 py-3 md:px-8">
         <div className="flex items-center justify-between w-full md:w-auto">
           {/* Logo */}
