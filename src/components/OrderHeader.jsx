@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import {Link} from "react-router-dom"
 import bglogo from "../assets/Images/logo.png";
 import { AiOutlineShoppingCart, AiOutlineMenu, AiOutlineClose, AiOutlineDown, AiOutlinePlus, AiOutlineEnvironment } from "react-icons/ai";
 import Cart from "./Cart"; 
@@ -66,9 +67,9 @@ const Header = () => {
                 onClick={toggleCart} // Open cart on click
               />
 
-              <button className="bg-orange-500 text-white px-3 py-2 rounded-md hover:bg-orange-600 transition-transform duration-300 transform hover:scale-105">
+              <Link className="bg-orange-500 text-white px-3 py-2 rounded-md hover:bg-orange-600 transition-transform duration-300 transform hover:scale-105">
                 Login
-              </button>
+              </Link>
               {!nav ? (
                 <AiOutlineMenu
                   size={25}
@@ -170,9 +171,9 @@ const Header = () => {
               className="cursor-pointer text-gray-800 hover:text-orange-500 transition-transform transform hover:scale-110"
               onClick={toggleCart} // Open cart on click
             />
-            <button className="bg-orange-500 text-white px-4 py-2 rounded-md hover:bg-orange-600 transition-transform duration-300 transform hover:scale-105">
+            <Link className="bg-orange-500 text-white px-4 py-2 rounded-md hover:bg-orange-600 transition-transform duration-300 transform hover:scale-105" to="/order/account/orders">
               Login
-            </button>
+            </Link>
           </div>
         </div>
 
