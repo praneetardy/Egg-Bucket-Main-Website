@@ -1,15 +1,23 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
+import React from "react";
+import { Routes, Route, Navigate } from "react-router-dom";
+import Account from "../components/Account";  
+import Orders from "../components/Orders";
+import Profile from "../components/Profile";
+import Addresses from "../components/Address";
 
 export default function DashBoard() {
     return (
-
+        <Account>  
         <Routes>
-            <Route root path="homeorders/*" element={HomeOrders} />
-            {/*  */}
-        </Routes>
-  
-    );
+           
 
+                <Route path="/" element={<Navigate to="orders" />} />
+                <Route path="orders" element={<Orders />} />
+                <Route path="profile" element={<Profile />} />
+                <Route path="addresses" element={<Addresses />} />
+           
+        </Routes>
+     </Account> 
+  );
 }
